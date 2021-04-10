@@ -1,0 +1,41 @@
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("testImage.jpeg");
+    background-size: cover;
+    background-position: center;
+    color:white;
+}
+
+.hero-input {
+    margin-top:1.4em;
+    color:black;
+}
+
+.info {
+    width: auto;
+}
+
+.content {
+    margin-top: 2em;
+    width: 85vw;
+}
+
+.title {
+    margin-bottom: 1em;
+}
+
+.edit-btn {
+    margin-left: auto; 
+    margin-right: 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.edit-form {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.plus-icon {
+    margin-right: 2em;
+    margin-left: auto;
+}
