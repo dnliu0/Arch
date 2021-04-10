@@ -2,20 +2,29 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { Figure, Container, Row, Jumbotron, Image, Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
+    MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon } from "mdbreact";
 //import Col from 'react-bootstrap/Col'
 
 class NavBar extends Component {
+    state = {
+        isOpen: false
+    };
+      
+    toggleCollapse = () => {
+        this.setState({ isOpen: !this.state.isOpen });
+    }
     render() {
         return (
-            
-                <Router>
-                    <Switch>
-                <Navbar bg="light">
-                    <Nav>
+            <Router>
+                <Switch>
+                <MDBNavbar color="#f50057 pink accent-3" dark expand="md">
+                <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
+                <   MDBNavbarNav left>
                         <Route>
-                        <Nav.Item>
+                        <MDBNavItem active>
                             <Nav.Link href="/home">主页</Nav.Link>
-                        </Nav.Item>
+                        </MDBNavItem>
                         </Route>
                         <NavDropdown title="专辑" id="nav-dropdown">
                             <NavDropdown.Item eventKey="1.1">共享知识库</NavDropdown.Item>
@@ -49,8 +58,9 @@ class NavBar extends Component {
                         <Nav.Item>
                         <Nav.Link href="/preview">预览</Nav.Link>
                         </Nav.Item>
-                    </Nav>
-                </Navbar>
+                        </MDBNavbarNav>
+                    </MDBCollapse>
+                </MDBNavbar>
                     
                 </Switch>
                 </Router>

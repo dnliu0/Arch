@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { Figure, Container, Row, Col, Jumbotron, Image, Nav, Card, Button } from 'react-bootstrap'
 import './Preview.css';
+import { MDBJumbotron, MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBIcon } from "mdbreact";
 //import Col from 'react-bootstrap/Col'
 
 class Preview extends Component {
     render() {
         return (
-            <Container fluid>
+            <div>
                 <Jumbotron className="hero" fluid>
                         <Container>
                             <h1>Fuster住宅，西班牙 / Arqbag</h1>
@@ -84,7 +85,7 @@ class Preview extends Component {
                     </Link>
                     </Container>
                     
-            </Container>
+            </div>
           );
     }
   

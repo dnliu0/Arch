@@ -1,3 +1,6 @@
+使用 Bootstrap 4 & Material Design
+4/7 静态预览页面（排版待修改）
+4/10 静态上传信息页面，预览页面待更改为Material Design元素
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
