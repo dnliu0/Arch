@@ -16,57 +16,64 @@ class NavBar extends Component {
     }
     render() {
         return (
-            <Router>
-                <Switch>
-                <MDBNavbar color="#f50057 pink accent-3" dark expand="md">
+                <div>
+                <MDBNavbar color="secondary-color" dark expand="md">
+                <MDBNavbarBrand>
+                    <strong className="white-text">Design</strong>
+                </MDBNavbarBrand>
+                <MDBNavbarToggler onClick={this.toggleCollapse} />
                 <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
-                <   MDBNavbarNav left>
+                    <MDBNavbarNav left>
                         <Route>
-                        <MDBNavItem active>
-                            <Nav.Link href="/home">主页</Nav.Link>
-                        </MDBNavItem>
+                            <MDBNavItem active>
+                                <MDBNavLink to="/">主页</MDBNavLink>
+                            </MDBNavItem>
                         </Route>
-                        <NavDropdown title="专辑" id="nav-dropdown">
-                            <NavDropdown.Item eventKey="1.1">共享知识库</NavDropdown.Item>
-                            <NavDropdown.Item eventKey="1.2">AI工具</NavDropdown.Item>
-                            <NavDropdown.Item eventKey="1.3">产业前沿</NavDropdown.Item>
-                            <NavDropdown.Item eventKey="1.4">领军人物</NavDropdown.Item>
-                            <NavDropdown.Item eventKey="1.5">同行者</NavDropdown.Item>
-                            <NavDropdown.Item eventKey="1.6">其他系列</NavDropdown.Item>
-                        </NavDropdown>
-                        <Nav.Item>
-                        <Nav.Link to="/class">分类</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                        <Nav.Link href="/explore">探索</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                        <Nav.Link href="/cross">交叉探索</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                        <Nav.Link href="/promote">投稿与推广</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                        <Nav.Link href="#find">找工作/找人才</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                        <Nav.Link href="#project">项目对接</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                        <Nav.Link href="#topic">话题广场</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                        <Nav.Link href="/preview">预览</Nav.Link>
-                        </Nav.Item>
-                        </MDBNavbarNav>
-                    </MDBCollapse>
-                </MDBNavbar>
-                    
-                </Switch>
-                </Router>
-            
-                
-          );
+                        <MDBNavItem>
+                            <MDBDropdown>
+                                <MDBDropdownToggle nav caret>
+                                    <div className="d-inline">专辑</div>
+                                </MDBDropdownToggle>
+                                <MDBDropdownMenu  className="dropdown-default">
+                                    <MDBDropdownItem href="#!">共享知识库</MDBDropdownItem>
+                                    <MDBDropdownItem href="#!">AI工具</MDBDropdownItem>
+                                    <MDBDropdownItem href="#!">产业前沿</MDBDropdownItem>
+                                    <MDBDropdownItem href="#!">领军人物</MDBDropdownItem>
+                                    <MDBDropdownItem href="#!">同行者</MDBDropdownItem>
+                                    <MDBDropdownItem href="#!">其他系列</MDBDropdownItem>
+                                </MDBDropdownMenu>
+                            </MDBDropdown>
+                        </MDBNavItem>
+                        <MDBNavItem>
+                            <MDBNavLink to="/class">分类</MDBNavLink>
+                        </MDBNavItem>
+                        <MDBNavItem>
+                            <MDBNavLink to="/explore">探索</MDBNavLink>
+                        </MDBNavItem>
+                        <MDBNavItem>
+                            <MDBNavLink to="/cross">交叉探索</MDBNavLink>
+                        </MDBNavItem>
+                        <MDBNavItem>
+                            <MDBNavLink to="/promote">投稿与推广</MDBNavLink>
+                        </MDBNavItem>
+                        <MDBNavItem>
+                            <MDBNavLink to="/find">找工作/找人才</MDBNavLink>
+                        </MDBNavItem>
+                        <MDBNavItem>
+                            <MDBNavLink to="/project">项目对接</MDBNavLink>
+                        </MDBNavItem>
+                        <MDBNavItem>
+                            <MDBNavLink to="/topic">话题广场</MDBNavLink>
+                        </MDBNavItem>
+                        <MDBNavItem>
+                            <MDBNavLink to="/preview">预览</MDBNavLink>
+                        </MDBNavItem>
+                    </MDBNavbarNav>
+                </MDBCollapse>
+            </MDBNavbar>  
+            </div>
+       
+        );
     }
   
 }
